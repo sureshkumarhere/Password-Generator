@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="index.js" defer></script>
+    <title>Password Generator</title>
+</head>
+<body>
+
+    <div class="h-screen w-screen flex items-center justify-center bg-gradient-to-br from-purple-600 to-indigo-800">
+        <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+            <div class="text-2xl font-bold text-center text-gray-800 mb-4">PASSWORD GENERATOR</div>
+            
+            <div class="flex items-center space-x-2 mb-4">
+                <input type="text"  placeholder="Password"  class="password_show w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <img src="copy.png" alt="copy" class="h-6 cursor-pointer" id="copyButton">
+            </div>
+
+            <div class="flex justify-between items-center mb-4">  
+                <span class="text-gray-700">PASSWORD LENGTH</span>
+                <p class="data-password-length font-semibold text-gray-800">10</p>
+            </div>
+
+            <div class="w-full mb-4">
+                <input type="range" id="simpleRange" name="simpleRange" min="4" max="25" value="10" class="w-full">
+               
+            </div>
+
+            <div class="space-y-2 mb-4">
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" id="o1" name="o1" value="o1" class="form-checkbox h-5 w-5 text-blue-600">
+                    <span class="text-gray-700">Includes Uppercase letters</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" id="o2" name="o2" value="o2" class="form-checkbox h-5 w-5 text-blue-600">
+                    <span class="text-gray-700">Includes Lowercase letters</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" id="o3" name="o3" value="o3" class="form-checkbox h-5 w-5 text-blue-600">
+                    <span class="text-gray-700">Includes Symbols</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="checkbox" id="o4" name="o4" value="o4" class="form-checkbox h-5 w-5 text-blue-600">
+                    <span class="text-gray-700">Includes Numbers</span>
+                </label>
+            </div>
+
+            <div class="show_strength flex justify-between items-center mb-4">  
+                <p class="text-gray-700">Strength</p>    
+                <img src="green.jpg" alt="strength indicator" class="h-4 image_show">
+            </div>
+
+            <button class="generate_password w-full bg-gradient-to-br from-cyan-500 to-blue-500 text-white py-2.5 rounded-lg hover:from-cyan-600 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                Generate Password
+            </button>
+        </div>
+    </div>
+</body>
+</html>
